@@ -6,7 +6,7 @@ public class GradebookTest {
 
         Scanner input = new Scanner(System.in);
 
-        Gradebook myGradebook = new Gradebook("CS101 Introduction to Java Programming", "Professor Asim Wagan");
+        Gradebook myGradebook = new Gradebook("CS101 Introduction to Java Programming");
 
 
         // System.out.printf("gradeBook1 course name is: %s\n\n", myGradebook1.getCourseName());
@@ -20,6 +20,8 @@ public class GradebookTest {
         // myGradebook.setCourseName(gradeBook);
 
         myGradebook.displayMessage();
-        myGradebook.determineClassAverage();
+        myGradebook.inputGrades();
+        myGradebook.displayGradeReport();
+        // myGradebook.determineClassAverage();
     }
 }
