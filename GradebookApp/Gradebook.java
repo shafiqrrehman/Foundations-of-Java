@@ -3,67 +3,139 @@ import java.util.Scanner;
 public class Gradebook {
 
     private String courseName;
-    private String courseInstructor;
+    private int total;
+    private int gradeCounter;
+    private int aCount;
+    private int bCount;
+    private int cCount;
+    private int dCount;
+    private int fCount;
 
-    public Gradebook(String nameCourse, String nameIntructor) {
+
+    public Gradebook(String nameCourse) {
         courseName = nameCourse;
-        courseInstructor = nameIntructor;
     }
 
     public void setCourseName(String name) {
         courseName = name;
     }
 
-    public void setCourseInstructor(String name) {
-        courseInstructor = name;
-    }
-
+    
     public String getCourseName() {
         return courseName;
     }
 
-    public String getCourseInstructor() {
-        return courseInstructor;
-    }
-
+    
     public void displayMessage() {
 
-        System.out.printf("\nWelcome to the Grade Book for: %s!\n", getCourseName());
-        System.out.printf("\nThis course is presented by: %s\n\n", getCourseInstructor());
-
+        System.out.printf("\nWelcome to the Grade Book for: \n%s!\n\n", getCourseName());
     }
 
-    public void determineClassAverage() {
+    public void inputGrades() {
 
         Scanner input = new Scanner(System.in);
 
-        int grade, total, gradeCounter; 
-        double average;
+        int grade;
 
-        total = 0;
-        gradeCounter = 0;
+        System.out.printf("%s\n%s\n %s\n %s\n", 
+            "Enter the integer grades in the range 0-100", 
+            "Type the-end-file to terminate the input: ", 
+            "On Linux/Unix/Mac OS X type <Ctrl> d then press Enter", 
+            "On Windows type <Ctrl> z the press Enter");
 
-        System.out.print("Enter grade or -1 to Quit: ");
-        grade = input.nextInt();
 
-        while( grade != -1 ) {
+        while(input.hasNext()) {
 
-            total += grade;
-            gradeCounter++;
-
-            System.out.print("Enter grade or -1 to Quit: ");
             grade = input.nextInt();
-        }
+            total += grade;
+            ++gradeCounter;
 
-        if ( gradeCounter != 0 ) {
+            incrementLetterGradeCounter(grade);
 
-            average = (double) total / 10;
-            
-            System.out.printf("\nTotal of the %d grades entered is %d\n ", gradeCounter, total);
-            System.out.printf("\nClass average is %.2f\n ", average);
-
-        } else {
-            System.out.println("No grades were entered!\n");
         }
     }
+
+    private void incrementLetterGradeCounter(int grade) {
+
+        switch(grade / 10) {
+
+            case 9:
+            case 10:
+                ++aCount;
+                break;
+
+            case 8:
+                ++bCount;
+                break;
+
+            case 7:
+                ++cCount;
+                break;
+
+            case 6:
+                ++dCount;
+                break;
+
+            default:
+                ++fCount;
+                break;
+        }
+    }
+
+    public void displayGradeReport() {
+
+        System.out.println("\n....Grade Report....");
+
+        if (gradeCounter != 0) {
+            
+            double average = (double) total / gradeCounter;
+
+            System.out.printf("Total numbers of %d grades entered is %d\n", gradeCounter, total);
+            System.out.printf("Class average is %.2f\n", average);
+            System.out.printf("%s\n%s%d\n%s%d\n%s%d\n%s%d\n%s%d\n", 
+                "Number of students who received each grade: ", 
+                "A: ", aCount, 
+                "B: ", bCount, 
+                "C: ", cCount, 
+                "D: ", dCount, 
+                "F: ", fCount);
+        }
+        else {
+            System.out.println("No grades were entered")
+        }
+    }
+
+    // public void determineClassAverage() {
+
+    //     Scanner input = new Scanner(System.in);
+
+    //     int grade, total, gradeCounter; 
+    //     double average;
+
+    //     total = 0;
+    //     gradeCounter = 0;
+
+    //     System.out.print("Enter grade or -1 to Quit: ");
+    //     grade = input.nextInt();
+
+    //     while( grade != -1 ) {
+
+    //         total += grade;
+    //         gradeCounter++;
+
+    //         System.out.print("Enter grade or -1 to Quit: ");
+    //         grade = input.nextInt();
+    //     }
+
+    //     if ( gradeCounter != 0 ) {
+
+    //         average = (double) total / 10;
+            
+    //         System.out.printf("\nTotal of the %d grades entered is %d\n ", gradeCounter, total);
+    //         System.out.printf("\nClass average is %.2f\n ", average);
+
+    //     } else {
+    //         System.out.println("No grades were entered!\n");
+    //     }
+    // }
 }
