@@ -101,41 +101,8 @@ public class Gradebook {
                 "F: ", fCount);
         }
         else {
-            System.out.println("No grades were entered")
+            System.out.println("No grades were entered");
         }
     }
 
-    // public void determineClassAverage() {
-
-    //     Scanner input = new Scanner(System.in);
-
-    //     int grade, total, gradeCounter; 
-    //     double average;
-
-    //     total = 0;
-    //     gradeCounter = 0;
-
-    //     System.out.print("Enter grade or -1 to Quit: ");
-    //     grade = input.nextInt();
-
-    //     while( grade != -1 ) {
-
-    //         total += grade;
-    //         gradeCounter++;
-
-    //         System.out.print("Enter grade or -1 to Quit: ");
-    //         grade = input.nextInt();
-    //     }
-
-    //     if ( gradeCounter != 0 ) {
-
-    //         average = (double) total / 10;
-            
-    //         System.out.printf("\nTotal of the %d grades entered is %d\n ", gradeCounter, total);
-    //         System.out.printf("\nClass average is %.2f\n ", average);
-
-    //     } else {
-    //         System.out.println("No grades were entered!\n");
-    //     }
-    // }
 }
