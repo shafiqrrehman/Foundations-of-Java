@@ -6,7 +6,7 @@ public class MaximumFinder {
 		
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("Enter three floating-point value separated by space: ");
+		System.out.print("\nEnter three floating-point value separated by space: ");
 
 		double num1 = input.nextDouble();
 		double num2 = input.nextDouble();
@@ -14,7 +14,7 @@ public class MaximumFinder {
 
 		double result = maximum(num1, num2, num3);
 
-		System.out.println("Maximum value: " + result);
+		System.out.println("\nMaximum value: " + result);
 
 	}
 
