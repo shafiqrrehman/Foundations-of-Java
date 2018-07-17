@@ -14,7 +14,44 @@ public class Craps {
 
 
 	public static void main(String[] args) {
-		
+		int myPoint = 0;
+
+		Status gameStatus;
+
+		int sumOfDice = rollDice();
+
+		switch (sumOfDice) {
+			case SEVEN:
+			case YO_LEVEN:
+				gameStatus = Status.WON;
+				break;
+			case SNACK_EYE:
+			case TREY:
+			case BOX_CARS:
+				gameStatus = Status.LOST;
+				break;
+			default:
+				gameStatus = Status.CONTINUE;
+				myPoint = sumOfDice;
+				System.out.printf("Point is %d\n", myPoint);
+				break;
+		}
+
+		while (gameStatus == Status.CONTINUE) {
+
+			sumOfDice = myPoint;
+
+			if (sumOfDice == myPoint) 
+				gameStatus = Status.WON;
+			else
+				if (sumOfDice == SEVEN) 
+					gameStatus = Status.LOST;
+		}
+
+		if(gameStatus == Status.WON)
+			System.out.println("Player Won");
+		else
+			System.out.println("Player Loses");
 	}
 
 	public static int rollDice() {
