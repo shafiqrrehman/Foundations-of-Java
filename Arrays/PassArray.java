@@ -4,7 +4,7 @@ public class PassArray {
 		
 		int[] array = { 1, 2, 3, 4, 5 };
 
-		System.out.println( "\nEffects of passing reference to entire array are:\n" + 
+		System.out.println( "\nEffects of passing reference to entire array are:\n\n" + 
 						  "The value of the original array are:" );
 
 		for ( int value : array )
@@ -17,7 +17,7 @@ public class PassArray {
 			System.out.printf( "	%d", value );
 
 		System.out.printf( 
-			"\n\nEffects of passing array element value:\n" + 
+			"\n\nEffects of passing array element value:\n\n" + 
 			"array[3] before modifiedElement: %d\n", array[ 3 ] );
 
 		modifiedElement( array[ 3 ] );
