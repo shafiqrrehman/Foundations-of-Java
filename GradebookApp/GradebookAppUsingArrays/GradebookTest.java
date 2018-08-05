@@ -5,7 +5,7 @@ public class GradebookTest {
 	public static void main(String[] args) {
 		
 		// Array of stuents grades
-		int[] gradesArray = { 87, 97, 78, 62, 75, 96, 33, 89, 94, 86 };
+		int[] gradesArray = { 87, 97, 78, 62, 75, 96, 100, 89, 94, 86 };
 
 		Gradebook myGradebook = new Gradebook( 
 			"CS101 Introduction to Java Programming", gradesArray );
