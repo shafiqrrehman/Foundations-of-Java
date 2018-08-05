@@ -112,7 +112,7 @@ public class Gradebook {
 			for ( int star = 0; star < frequency[ count ]; star++ )
 				System.out.print("*");
 
-			System.out.printf(); // Start a new line of output
+			System.out.println(); // Start a new line of output
 
 		} // End of for statement
 	} // end of outputBarChart method
