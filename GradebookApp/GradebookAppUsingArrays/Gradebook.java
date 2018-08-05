@@ -121,12 +121,12 @@ public class Gradebook {
 	// Outputs the content of grades array
 	public void outputGrades() {
 
-		System.out.println( "The Grades are\n" );
+		System.out.println( "The Grades are:\n" );
 
 		// Output each student grade
 		for ( int student = 0; student < grades.length; student++ ) {
 			
-			System.out.printf( "Student %2d: %3d", student + 1, grades [ student ] );
+			System.out.printf( "Student %2d: %3d\n", student + 1, grades [ student ] );
 
 		} // end of for statement
 	} // end of outputGrades method
