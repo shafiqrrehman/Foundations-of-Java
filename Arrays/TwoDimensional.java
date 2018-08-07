@@ -13,7 +13,7 @@ public class TwoDimensional {
 		outputArray( array2 ); // display array2 by row
 	} // end of main method
 
-	public static void outputArray( int[] array ) {
+	public static void outputArray( int[][] array ) {
 
 		// loop through array's row
 		for ( int row = 0; row < array.length; row++) {
