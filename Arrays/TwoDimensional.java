@@ -11,7 +11,7 @@ public class TwoDimensional {
 
 		System.out.println("\nValues in array2 by rows are");
 		outputArray( array2 ); // display array2 by row
-	}
+	} // end of main method
 
 	public static void outputArray( int[] array ) {
 
@@ -23,6 +23,6 @@ public class TwoDimensional {
 				System.out.printf( "%d ", array[ row ][ column ] );
 
 			System.out.println();
-		}
-	}
-}
+		} // end of loop
+	} // end of outpuArray method
+} // end of Twodimensional class 
