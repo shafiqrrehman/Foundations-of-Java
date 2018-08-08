@@ -6,7 +6,7 @@ public class GradebookTest {
 	public static void main(String[] args) {
 		
 		// two-dimensional array of stuents grades
-		int[] gradesArray = { { 87, 96, 70 },
+		int[][] gradesArray = { { 87, 96, 70 },
 							  { 68, 87, 90 },
 							  { 94, 100, 90 },
 							  { 100, 81, 82 },
