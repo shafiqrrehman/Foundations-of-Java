@@ -137,7 +137,7 @@ public class Gradebook {
 	public void outputGrades() {
 
 		System.out.println( "The grades are:\n" );
-		System.out.print( "				" ); // align column heads
+		System.out.print( "               " ); // align column heads
 
 		// create a column heading for each of the tests
 		for ( int test = 0; test < grades[ 0 ].length; test++ )
