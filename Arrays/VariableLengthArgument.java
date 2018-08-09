@@ -15,7 +15,7 @@ public class VariableLengthArgument {
 		System.out.printf( "Average of d1, d2, and d3 is %.2f\n", average( d1, d2, d3 ) );
 
 		System.out.printf( "Average of d1, d2, d3 and d4 is %.2f\n", average( d1, d2, d3, d4 ) );
-	}
+	} // end of main method
 
 	// calculate average
 	public static double average ( double... numbers ) {
@@ -27,5 +27,5 @@ public class VariableLengthArgument {
 			total += d;
 
 		return total / numbers.length; // return average
-	} // end average method
+	} // end method average
 } // end VariableLengthargument Lists class
