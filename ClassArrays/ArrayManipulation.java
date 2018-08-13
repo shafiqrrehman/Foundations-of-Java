@@ -8,7 +8,7 @@ public class ArrayManipulation {
 		Arrays.sort( doubleArray );
 		System.out.printf( "\ndoubleArray: " );
 		
-		for ( int value : doubleArray )
+		for ( double value : doubleArray )
 			System.out.printf( "%.1f", value );
 
 		// fill 10-element array with 7s
@@ -51,7 +51,7 @@ public class ArrayManipulation {
 	} // end main
 
 	// output values in each arrays
-	public static void diplayArray ( int[] array, String description ) {
+	public static void displayArray ( int[] array, String description ) {
 
 		System.out.printf( "\n%s: ", description );
 
