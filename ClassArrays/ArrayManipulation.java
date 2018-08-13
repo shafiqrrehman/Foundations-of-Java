@@ -9,7 +9,7 @@ public class ArrayManipulation {
 		System.out.printf( "\ndoubleArray: " );
 		
 		for ( double value : doubleArray )
-			System.out.printf( "%.1f", value );
+			System.out.printf( "%.1f ", value );
 
 		// fill 10-element array with 7s
 		int[] filledIntArray = new int[ 10 ];
@@ -17,7 +17,7 @@ public class ArrayManipulation {
 		displayArray( filledIntArray, "filledIntArray" );
 
 		// copy array intArray into array intArrayCopy
-		int[] intArray = { 1, 2, 3, 4, 5 };
+		int[] intArray = { 1, 2, 3, 4, 5, 6 };
 		int[] intArrayCopy = new int[ intArray.length ];
 		System.arraycopy( intArray, 0, intArrayCopy, 0, intArray.length );
 		displayArray( intArray, "intArray" );
