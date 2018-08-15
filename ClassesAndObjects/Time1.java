@@ -14,10 +14,10 @@ public class Time1 {
 			hour = h;
 			minute = m;
 			second = s;
-		}
-		else
+		} else {
 			throw new IllegalArgumentException( 
 				"hour, minute and/or second was out of range" );
+		}
 	} // end method setTime
 
 	// convert to String in Universal-time format (HH:MM:SS)
