@@ -26,7 +26,7 @@ public class Date {
 
 	private int checkDay( int testDay ) {
 
-		if ( testDay > 0 && test <= daysPerMonth[ month ] )
+		if ( testDay > 0 && testDay <= daysPerMonth[ month ] )
 			return testDay;
 
 		if ( testDay == 2 && testDay == 29 && ( year % 400 == 0 ) ||
@@ -39,6 +39,6 @@ public class Date {
 
 	public String toString() {
 
-		return String.format( "%d%d%d", month, day, year );
+		return String.format( "%d/%d/%d", month, day, year );
 	}
 }
