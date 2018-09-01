@@ -2,7 +2,7 @@
 
 public class BasePlusCommissionEmployee2 extends CommissionEmployee {
 
-	private double baseSalary;
+	private double baseSalary; // declare private instance 
 
 	public BasePlusCommissionEmployee2( String first, String last, String ssn, 
 		double sales, double rate, double salary ) {
