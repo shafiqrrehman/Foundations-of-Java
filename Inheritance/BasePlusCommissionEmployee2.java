@@ -10,7 +10,7 @@ public class BasePlusCommissionEmployee2 extends CommissionEmployee {
 		super( first, last, ssn, sales, rate );
 		
 		setBaseSalary( salary );
-	}
+	} // end of constructor
 
 	public void setBaseSalary( double salary ) {
 
@@ -18,18 +18,18 @@ public class BasePlusCommissionEmployee2 extends CommissionEmployee {
 			baseSalary = salary;
 		else
 			throw new IllegalArgumentException( "Base salary must be >= 0.0" );
-	}
+	} // end of method setBaseSalary
 
 	public double getBaseSalary() {
 
 		return baseSalary;
-	}
+	} // end of method getBaseSalary
 
-	@Override
+	@Override // this annotation indicates thats that below method override superclass mehtod
 	public double earnings() {
 		// not allowed: commissionRate and grossSales private in superclass
 		return baseSalary + ( commissionRate * grossSales );
-	}
+	} // end of method earnings 
 
 	@Override
 	public String toString() {
