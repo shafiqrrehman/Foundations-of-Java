@@ -39,5 +39,5 @@ public class BasePlusCommissionEmployee2 extends CommissionEmployee {
 			"social security number", socialSecurityNumber, 
 			"gross sales", grossSales, "commission rate", commissionRate, 
 			"base salary", baseSalary );
-	}
-}
+	} // end of method toString
+} // end of class BasePlusCommissionEmployee2
