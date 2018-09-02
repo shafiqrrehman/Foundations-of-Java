@@ -38,6 +38,6 @@ public class BasePlusCommissionEmployeeProtected extends CommissionEmployee {
 			"commission employee", firstName, lastName, 
 			"social security number", socialSecurityNumber, 
 			"gross sales", grossSales, "commission rate", commissionRate, 
-			"base salary", baseSalary );
+			"base salary", baseSalary ); // end of String format
 	} // end of method toString
 } // end of class BasePlusCommissionEmployee2
