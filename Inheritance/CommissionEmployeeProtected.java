@@ -6,7 +6,7 @@ public class CommissionEmployeeProtected extends Object {
 	protected double grossSales;
 	protected double commissionRate;
 
-	public CommissionEmployee( String first, String last, String ssn, 
+	public CommissionEmployeeProtected( String first, String last, String ssn, 
 		double sales, double rate ) {
 
 		firstName = first;
