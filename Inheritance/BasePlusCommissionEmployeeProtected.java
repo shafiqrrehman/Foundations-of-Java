@@ -1,10 +1,10 @@
 // private superclass members cannot be accessed in a subclass
 
-public class BasePlusCommissionEmployeeProtected extends CommissionEmployee {
+public class BasePlusCommissionEmployeeProtected extends CommissionEmployeeProtected {
 
 	private double baseSalary; // declare private instance 
 
-	public BasePlusCommissionEmployee2( String first, String last, String ssn, 
+	public BasePlusCommissionEmployeeProtected( String first, String last, String ssn, 
 		double sales, double rate, double salary ) {
 		// explicit call to superclass CommissionEmployee constructor
 		super( first, last, ssn, sales, rate );
